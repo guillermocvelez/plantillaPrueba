@@ -29,9 +29,21 @@ header{
     position: relative;
     z-index: 1000;
     transition: all 100ms ease-in-out;
+    
 
     
 }
+.menu-btn{
+    background-color: red;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    color: white;
+}
+.menu-btn:active{
+    transform: scale(0.9);
+}
+
 
 .header-logo-container{
     display: flex;

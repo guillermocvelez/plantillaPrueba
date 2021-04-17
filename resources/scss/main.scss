@@ -11,9 +11,36 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 16px;
+    cursor: pointer;
+    overflow: hidden;
     img{
         width: 100%;
+        transition: all 300ms ease-out;
+        filter: brightness(0.8);
     }
+}
+.main-theme{
+    position: relative;
+    overflow: hidden;
+    transition: all 300ms ease-out;
+}
+.popup{
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50px);
+    left:0;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 300ms ease-in-out;
+}
+.main-theme:hover img{
+    transform: scale(1.2);
+}
+.main-theme:hover .popup{
+    transform:translateY(0);
 }
 .main-info{
     display: grid;
@@ -75,6 +102,12 @@
         border-radius: 8px;
         font-weight: bold;
         box-shadow: 3px 3px 9px rgba(0,0,0,0.4);
+        transition: all 300ms ease-in-out;
+    }
+    .main-landing__btn:hover{
+        background-color: white;
+        border:2px solid red;
+        color: red;
     }
 
 }

@@ -1842,14 +1842,57 @@ module.exports = {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-var caption = document.querySelectorAll("carousel-caption");
+var pageNumber = document.getElementById('pageNumbers');
+var pageNumber02 = document.getElementById('pageNumber02');
+console.log(pageNumber);
 window.addEventListener("scroll", function () {
   var header = document.querySelector('header');
   header.classList.toggle("sticky", window.scrollY > 0);
 });
-/* caption.forEach(c , () => {
-    c.addEventListener
-} ) */
+var options = {
+  rootMargin: '0px 0px 0px 0px',
+  threshold: 0.5
+};
+
+function callback(entries, observer) {
+  if (entries[0].isIntersecting) {
+    console.log("Se llamó al callback");
+    var i = 0;
+    var contador = setInterval(function () {
+      pageNumber.innerText = "+".concat(i);
+      i++;
+
+      if (i == 12) {
+        clearInterval(contador);
+      }
+    }, 100);
+  }
+}
+
+var observer = new IntersectionObserver(callback, options);
+observer.observe(pageNumber);
+var options1 = {
+  rootMargin: '0px 0px 0px 0px',
+  threshold: 0.5
+};
+
+function callback1(entries, observer1) {
+  if (entries[0].isIntersecting) {
+    console.log("Se llamó al callback");
+    var i = 0;
+    var contador = setInterval(function () {
+      pageNumber02.innerText = "+".concat(i);
+      i++;
+
+      if (i == 10) {
+        clearInterval(contador);
+      }
+    }, 100);
+  }
+}
+
+var observer1 = new IntersectionObserver(callback1, options1);
+observer1.observe(pageNumber02);
 
 /***/ }),
 

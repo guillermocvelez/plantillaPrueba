@@ -1,8 +1,8 @@
-<div class="container-fluid upper-header">
-    <div class="container upper-header__info">
+<div class="container-fluid upper-header d-none d-lg-flex">
+    <div class="container upper-header__info ">
         <a href="/"><i class="fas fa-phone-alt"></i> +57 311 607 6065</a>
         <a href="/"><i class="fas fa-map-marker-alt"></i> Calle 69 Nro 10-75 Manizales, Cladas</a>
-        <a href="/"><i class="fas fa-map-marker-alt"></i> guillermo.c.velez@gmail.com</a>
+        <a href="/"><i class="fas fa-envelope-open-text"></i></i> guillermo.c.velez@gmail.com</a>
         <a href="/"></a>
         <a href="/"><i class="fas fa-sign-in-alt"></i> Login/Registrase</a>
     </div>
@@ -16,8 +16,13 @@
         </div>
         
     </div>
-    <nav>
-        <ul class="header-nav">
+        <nav>
+
+         <div class="d-lg-none">
+             <button class="menu-btn">Menu</button>
+         </div>            
+
+        <ul class="header-nav d-none d-lg-flex">
             <li class="header-nav__item">Home <i class=" fas fa-chevron-down"></i>
             <div class="header-nav__dropdown">
                 <ul>

@@ -4,10 +4,11 @@
             <div id="movebg" class="footer-image__background">
             <h2 class="footer-title">Diferentes variaciones de Headers y Footers</h2>
             <div class="footer-break"></div>
+
             <div class="footer-template__images">
                 <img src="{{asset('images/layo01.png')}}" alt="">
-                <img src="{{asset('images/layo02.png')}}" alt="">
-                <img src="{{asset('images/layo03.png')}}" alt="">
+                <img class="d-none d-sm-block" src="{{asset('images/layo02.png')}}" alt="">
+                <img class="d-none d-lg-block" src="{{asset('images/layo03.png')}}" alt="">
             </div>
             </div>
             
@@ -16,14 +17,14 @@
 
     <section class="container footer-section">
         <div class="footer-section__text">
-            <h2>Rsponsivo  Listo para Retina Display</h2>
+            <h2>Responsivo  Listo para Retina Display</h2>
             <div class="footer-break__blue"></div>
             <p>
                 Nuestras plantillas se adaptan perfectamente a cualquier dispositivo moderno, desde PC hasta smartphones
             </p>
             <button class="footer-btn">Obterner Plantilla</button>
         </div>
-        <div class="footer-section__image">
+        <div class="d-none d-lg-block" class="footer-section__image">
             <img src="{{asset('images/responsive.png')}}" alt="">
         </div>
     </section>

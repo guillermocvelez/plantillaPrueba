@@ -1,6 +1,6 @@
 <section class="container templates">
-    <nav class="templates-nav">
-        <ul class="templates-nav__navigation">
+    <nav class="templates-nav d-none d-lg-block">
+        <ul class="templates-nav__navigation ">
             <li class="templates-nav__links"><a href="#">Todas</a></li>
             <li class="templates-nav__links"><a href="#">Home</a></li>
             <li class="templates-nav__links"><a href="#">Noticias</a></li>
