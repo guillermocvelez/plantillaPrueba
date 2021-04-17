@@ -27,10 +27,10 @@ header{
     align-items: center;
     height: 150px;
     position: relative;
+    z-index: 1000;
+    transition: all 100ms ease-in-out;
 
-    .header-nav__dropdown{
-        position: absolute;
-    }
+    
 }
 
 .header-logo-container{
@@ -45,11 +45,17 @@ header{
 .header-logo{
     width: 100px;
 }
+nav{
+    position: relative;
+}
 .header-nav{
     display: flex;
+    
+    
 }
 
 .header-nav__item{
+    /* position: relative; */
     margin-left: 16px;
     cursor: pointer;
 
@@ -59,5 +65,51 @@ header{
     }
     .header-icons{
         font-size: 16px;
+    }       
+    
+}
+.header-nav__item:hover{    
+        color: red;    
+}
+
+
+header.sticky {
+    position: fixed;
+    background-color: white;
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.4);
+    height: 120px;
+    padding: 8px 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header-nav__dropdown{
+    opacity: 0;
+       
+    
+    position: absolute;
+    z-index: 100;
+    top:240%;
+    
+    background-color: #0d2d62;
+    color: white;
+    transition: all 300ms ease-out;
+    
+    ul{
+        padding: 8px 16px;
+        width: 100%;
+        li{
+            width: auto;
+            padding: 8px;
+            
+        }
     }
 }
+.large{
+    display: flex;
+}
+.header-nav__item:hover  .header-nav__dropdown{
+    opacity: 1;
+}
+
